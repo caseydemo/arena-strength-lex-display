@@ -2,6 +2,8 @@ import { getClient } from '@faustwp/experimental-app-router';
 import { gql } from '@apollo/client';
 import Link from 'next/link';
 
+// local docker devving: https://www.youtube.com/watch?v=mi8kpAgHYFo&ab_channel=MaksimIvanov
+
 export default async function Home() {
   let client = await getClient();
 
@@ -22,7 +24,7 @@ export default async function Home() {
 
   return (
     <main>
-      <h2>Posts fart</h2>
+      <h2>Posts fart poop</h2>
       <ul>
         {data.posts.nodes.map((post) => (
           <li>
