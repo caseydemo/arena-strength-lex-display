@@ -35,22 +35,7 @@ export default async function RootLayout({ children }) {
     <html lang="en">
       <body>
         <FaustProvider>
-          <header>
-            <div>
-              <h1>
-                <Link href="/">{data.generalSettings.title}</Link>
-              </h1>
-
-              <h5>{data.generalSettings.description}</h5>
-            </div>
-
-            <ul>
-              {data.primaryMenuItems.nodes.map((node) => (
-                <li>
-                  <Link href={node.uri}>{node.label}</Link>
-                </li>
-              ))}
-            </ul>
+          <header>            
           </header>
           {children}
         </FaustProvider>
