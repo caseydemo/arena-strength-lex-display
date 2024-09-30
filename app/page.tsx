@@ -12,6 +12,7 @@ export default async function Home() {
     let client = await getClient();
     let page = null;
     const postId = 8; // I am assuming this will always be the same id for the homepage
+    let schemaString = "";    
     try {
         const { data } = await client.query({
             query: gql`
@@ -89,27 +90,35 @@ export default async function Home() {
         `,
         });
         page = data.pages.nodes[0] ?? null;
-        console.log("seo", page.seo);
+
+        
+        
         // add ALL of the seo fields to the metadata object
         metadata.robots = {
             index: page.seo.metaRobotsNoindex,
             follow: page.seo.metaRobotsNofollow,        
         }
+        
+        
         metadata.openGraph = {
             title: page.seo.opengraphTitle,
             description: page.seo.opengraphDescription,
             url: page.seo.opengraphUrl,
             siteName: page.seo.opengraphSiteName,
+            type: 'website',            
             images: [
                 {
-                    url: page.seo.opengraphImage.sourceUrl,
+                    url: page.seo.opengraphImage ? page.seo.opengraphImage.sourceUrl : '',
                     width: 800,
                     height: 600,
-                    alt: page.seo.opengraphImage.altText,
                 },
             ],
             locale: "en_US",
         };
+
+        const schema = page.seo.schema;
+        schemaString = '<script type="application/ld+json">' + JSON.stringify(schema) + '</script>';
+
     } catch (error) {
         console.log(error);
     }
@@ -118,6 +127,7 @@ export default async function Home() {
         <main>
             {page && page.title ? (
                 <>
+                    <div dangerouslySetInnerHTML={{ __html: schemaString }} />
                     <h1>{page.title}</h1>
                     <section>
                         <div
