@@ -1,9 +1,12 @@
 import { gql } from "@apollo/client";
 import { getClient } from "@faustwp/experimental-app-router";
-import Link from "next/link";
 import "@/faust.config.js";
 import { FaustProvider } from "@faustwp/experimental-app-router/ssr";
 import { Metadata } from "next";
+// import styles from ./wordpress-styles.ts
+
+import "./wordpress-styles.ts";
+
 
 export const metadata: Metadata = {
     title: "Arena Strength & Performance",

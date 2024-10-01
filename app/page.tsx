@@ -85,7 +85,7 @@ export default async function Home() {
             {page && page.title ? (
                 <>
                     <div dangerouslySetInnerHTML={{ __html: schemaString }} />
-                    <h1>{page.title}</h1>
+                    <h1 style={{display: "none"}} >{page.title}</h1>
                     <section>
                         <div
                             dangerouslySetInnerHTML={{ __html: page.content }}

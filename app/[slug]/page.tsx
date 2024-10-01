@@ -57,8 +57,6 @@ export default async function Page(props) {
 
     return (
         <main>
-            {/* dump the data object to the page in a way react is cool with */}
-            <pre>{JSON.stringify(data, null, 2)}</pre>
             <h2>{data?.contentNode?.title}</h2>
             <div
                 dangerouslySetInnerHTML={{
