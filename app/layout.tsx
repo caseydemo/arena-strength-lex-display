@@ -8,6 +8,10 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Arena Strength & Performance",
     description: "Lexington Kentucky\'s premier weight training gym.",
+    robots: {
+        index: "index",
+        follow: "follow",
+    },
 };
 
 export default async function RootLayout({ children }) {

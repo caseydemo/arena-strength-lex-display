@@ -1,5 +1,6 @@
 import { getClient } from "@faustwp/experimental-app-router";
 import { gql } from "@apollo/client";
+import setMetaData from "./lib/setMetaData";
 export let metadata = {
     openGraph: {},
     robots: {}
@@ -91,7 +92,7 @@ export default async function Home() {
         });
         page = data.pages.nodes[0] ?? null;
 
-        
+        setMetaData(page.seo);
         
         // add ALL of the seo fields to the metadata object
         metadata.robots = {
