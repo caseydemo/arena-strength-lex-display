@@ -3,6 +3,8 @@ import { getClient } from "@faustwp/experimental-app-router";
 import "@/faust.config.js";
 import { FaustProvider } from "@faustwp/experimental-app-router/ssr";
 import { Metadata } from "next";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import "./wordpress-styles.ts";
 import "./global.css";
 
@@ -44,8 +46,10 @@ export default async function RootLayout({ children }) {
         <html lang='en'>
             <body>
                 <FaustProvider>
-                    <header></header>
+                    {/* <header></header> */}
+                    <Header />
                     {children}
+                    <Footer />                    
                 </FaustProvider>
             </body>
         </html>
