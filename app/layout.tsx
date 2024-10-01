@@ -3,9 +3,8 @@ import { getClient } from "@faustwp/experimental-app-router";
 import "@/faust.config.js";
 import { FaustProvider } from "@faustwp/experimental-app-router/ssr";
 import { Metadata } from "next";
-// import styles from ./wordpress-styles.ts
-
 import "./wordpress-styles.ts";
+import "./global.css";
 
 
 export const metadata: Metadata = {

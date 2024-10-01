@@ -56,8 +56,7 @@ export default async function Page(props) {
     });
 
     return (
-        <main>
-            <h2>{data?.contentNode?.title}</h2>
+        <main>            
             <div
                 dangerouslySetInnerHTML={{
                     __html: data?.contentNode?.content ?? "",
