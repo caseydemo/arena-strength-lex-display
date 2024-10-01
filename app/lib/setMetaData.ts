@@ -11,7 +11,7 @@ type seoType = {
 };
 export default function setMetaData(params: seoType): Metadata {
     
-    let metadata: Metadata = {        
+    let metadata: Metadata = {
         openGraph: {
             title: params.opengraphTitle,
             description: params.opengraphDescription,
