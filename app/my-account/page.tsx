@@ -25,6 +25,8 @@ export default async function Page() {
     `,
   });
 
+  console.log('why is this running')
+
   return (
     <>
       <h2>Welcome {data.viewer.name}</h2>

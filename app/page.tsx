@@ -61,29 +61,7 @@ export default async function Home() {
                                 raw
                             }
                             readingTime
-                            fullHead
-                        }
-                        author {
-                            node {
-                                seo {
-                                    metaDesc
-                                    metaRobotsNofollow
-                                    metaRobotsNoindex
-                                    title
-                                    social {
-                                        youTube
-                                        wikipedia
-                                        twitter
-                                        soundCloud
-                                        pinterest
-                                        mySpace
-                                        linkedIn
-                                        instagram
-                                        facebook
-                                    }
-                                }
-                            }
-                        }
+                        }                        
                     }
                     
                 }
@@ -92,31 +70,9 @@ export default async function Home() {
         });
         page = data.pages.nodes[0] ?? null;
 
-        setMetaData(page.seo);
-        
-        // add ALL of the seo fields to the metadata object
-        metadata.robots = {
-            index: page.seo.metaRobotsNoindex,
-            follow: page.seo.metaRobotsNofollow,        
-        }
-        
-        
-        metadata.openGraph = {
-            title: page.seo.opengraphTitle,
-            description: page.seo.opengraphDescription,
-            url: page.seo.opengraphUrl,
-            siteName: page.seo.opengraphSiteName,
-            type: 'website',            
-            images: [
-                {
-                    url: page.seo.opengraphImage ? page.seo.opengraphImage.sourceUrl : '',
-                    width: 800,
-                    height: 600,
-                },
-            ],
-            locale: "en_US",
-        };
+        console.log('pee pee poo poo');
 
+        // setMetaData(page.seo);
         const schema = page.seo.schema;
         schemaString = '<script type="application/ld+json">' + JSON.stringify(schema) + '</script>';
 
