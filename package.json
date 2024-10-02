@@ -17,7 +17,6 @@
     "@faustwp/experimental-app-router": "^0.2.2",
     "@wordpress/block-library": "^9.8.2",
     "graphql": "^16.7.1",
-    "html-react-parser": "^5.1.16",
     "next": "^14.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
