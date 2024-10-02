@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.css'
 import { gql } from "@apollo/client";
 import { getClient } from "@faustwp/experimental-app-router";
 import "@/faust.config.js";
