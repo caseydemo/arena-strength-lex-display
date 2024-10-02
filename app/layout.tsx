@@ -5,6 +5,7 @@ import { FaustProvider } from "@faustwp/experimental-app-router/ssr";
 import { Metadata } from "next";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import BootstrapClient from "./components/BootstrapClient";
 import "./wordpress-styles.ts";
 import "./global.css";
 
@@ -49,7 +50,8 @@ export default async function RootLayout({ children }) {
                     {/* <header></header> */}
                     <Header />
                     {children}
-                    <Footer />                    
+                    <Footer />
+                    <BootstrapClient />               
                 </FaustProvider>
             </body>
         </html>
