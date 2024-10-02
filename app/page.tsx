@@ -69,7 +69,7 @@ export default async function Home() {
         });
         page = data.pages.nodes[0] ?? null;        
 
-        // setMetaData(page.seo);
+        
         const schema = page.seo.schema;
         schemaString = '<script type="application/ld+json">' + JSON.stringify(schema) + '</script>';
 
