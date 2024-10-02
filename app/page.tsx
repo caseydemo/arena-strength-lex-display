@@ -5,7 +5,6 @@ export let metadata = {
     openGraph: {},
     robots: {}
 };
-import parse from "html-react-parser";
 
 // local docker devving: https://www.youtube.com/watch?v=mi8kpAgHYFo&ab_channel=MaksimIvanov
 
@@ -68,9 +67,7 @@ export default async function Home() {
             }
         `,
         });
-        page = data.pages.nodes[0] ?? null;
-
-        console.log('pee pee poo poo');
+        page = data.pages.nodes[0] ?? null;        
 
         // setMetaData(page.seo);
         const schema = page.seo.schema;
