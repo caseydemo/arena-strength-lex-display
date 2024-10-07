@@ -30,14 +30,18 @@ export default function FormClient() {
                 body: JSON.stringify({ email, name, message }),
             });
             const data = await res.json();
-            console.log(data);
+            // if (!res.ok) throw new Error(data?.error || 'Unable to send email');
+            if (!res.ok) {
+                throw new Error(data?.error || 'Unable to send email');
+            }
+            else {
+                // set formSubmitted to true - this hides the form and displays the thank you message
+                setFormSubmitted(true);
+            }
         }
         catch (error) {
             console.error("Error sending email:", error);
         }
-
-        setFormSubmitted(true);
-        
     }
 
     return (
