@@ -53,9 +53,7 @@ export default async function RootLayout({ children }) {
                 <FaustProvider>
                     {/* <header></header> */}
                     <Header />
-                    {children}
-                    <ContactForm />
-                    <Map />
+                    {children}                    
                     <Footer />
                     <BootstrapClient />               
                 </FaustProvider>

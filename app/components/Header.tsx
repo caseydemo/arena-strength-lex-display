@@ -7,7 +7,7 @@ export default function Header() {
             <nav className={`navbar navbar-expand-lg ${styles.myNavbar}`}>
                 <div className={`container-fluid ${styles.myContainerFluid}`}>
                     <Link
-                        href='#first-section'
+                        href='/'
                         className='navbar-brand'
                     >
                         <Image
@@ -42,7 +42,7 @@ export default function Header() {
                         <ul className='navbar-nav mr-auto'>
                             <li className={`nav-item ${styles.myNavItem}`}>
                                 <Link
-                                    href='#service-open-gym'
+                                    href='/#service-open-gym'
                                     className='nav-link'
                                 >
                                     Open Gym
@@ -50,7 +50,7 @@ export default function Header() {
                             </li>
                             <li className={`nav-item ${styles.myNavItem}`}>
                                 <Link
-                                    href='#service-group-classes'
+                                    href='/#service-group-classes'
                                     className='nav-link'
                                 >
                                     Group Classes
@@ -58,7 +58,7 @@ export default function Header() {
                             </li>
                             <li className={`nav-item ${styles.myNavItem}`}>
                                 <Link
-                                    href='#service-personal-training'
+                                    href='/#service-personal-training'
                                     className='nav-link'
                                 >
                                     Personal Training
@@ -66,15 +66,23 @@ export default function Header() {
                             </li>
                             <li className={`nav-item ${styles.myNavItem}`}>
                                 <Link
-                                    href='#service-rehab-only'
+                                    href='/#service-rehab-only'
                                     className='nav-link'
                                 >
                                     Rehab Only
                                 </Link>
                             </li>
+                            <li className={`nav-item ${styles.myNavItem}`} >                                
+                                <Link 
+                                    href="/meet-the-team"
+                                    className='nav-link'
+                                >
+                                Meet The Team
+                                </Link>
+                            </li>
                             <li className={`nav-item ${styles.myNavItem}`}>
                                 <Link
-                                    href='#contact-us-form'
+                                    href='/#contact-us-form'
                                     className='nav-link'
                                 >
                                     Contact Us

@@ -1,8 +1,6 @@
 import { getClient } from "@faustwp/experimental-app-router";
 import { gql } from "@apollo/client";
-import setMetaData from "./lib/setMetaData";
-import ContactForm from './components/ContactForm';
-import Map from './components/Map';
+import setMetaData from "../lib/setMetaData";
 export let metadata = {
     openGraph: {},
     robots: {}
@@ -13,7 +11,7 @@ export let metadata = {
 export default async function Home() {
     let client = await getClient();
     let page = null;
-    const postId = 8; // I am assuming this will always be the same id for the homepage
+    const postId = 104; // I am assuming this will always be the same id for the homepage
     let schemaString = "";    
     try {
         const { data } = await client.query({
@@ -90,8 +88,6 @@ export default async function Home() {
                             dangerouslySetInnerHTML={{ __html: page.content }}
                         />
                     </section>
-                    <ContactForm />
-                    <Map />
                 </>
             ) : (
                 <p>No page found</p>
