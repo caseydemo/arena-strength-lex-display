@@ -16,11 +16,12 @@
     "@faustwp/core": "^2.1.2",
     "@faustwp/experimental-app-router": "^0.2.2",
     "@wordpress/block-library": "^9.8.2",
+    "bootstrap": "^5.3.2",
     "graphql": "^16.7.1",
     "next": "^14.0.1",
+    "nodemailer": "^6.9.15",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "bootstrap": "^5.3.2"
+    "react-dom": "^18.2.0"
   },
   "engines": {
     "node": ">=18",

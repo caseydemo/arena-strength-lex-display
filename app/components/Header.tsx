@@ -82,7 +82,7 @@ export default function Header() {
                             </li>
                             <li className={`nav-item ${styles.myNavItem}`}>
                                 <Link
-                                    href='/#contact-us-form'
+                                    href='/contact-us'
                                     className='nav-link'
                                 >
                                     Contact Us
