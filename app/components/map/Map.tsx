@@ -1,8 +1,11 @@
 import styles from './map.module.css';
 export default function Map() {
     return (
-        <>
-            <p>1183 Brock McVey Dr Unit D, Lexington, KY 40509</p>
+        <div className={styles.map_container}>
+            <hr />
+            <h4 className={styles.map_sub_heading}>Arena Strength & Performance</h4>
+            <p>Telephone: (859) 533-1684 </p>
+            <p>Address: 1183 Brock McVey Dr Unit D, Lexington, KY 40509</p>
             {/* taken directly from google maps */}
             <iframe
                 title='Arena Strength & Performance, LLC'
@@ -13,7 +16,9 @@ export default function Map() {
                 allowFullScreen={true}
                 loading='lazy'
                 referrerPolicy='no-referrer-when-downgrade'
-            ></iframe>
-        </>
+                >
+            </iframe>
+            
+        </div>
     )
 }

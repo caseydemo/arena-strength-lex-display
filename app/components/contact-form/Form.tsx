@@ -57,47 +57,50 @@ export default function Form() {
 
     return (
         <>
+            <h2 id="contact-us" className={styles.main_heading}>Contact Us</h2>
             {/* if !formSubmitted, display 'contact us' and form, else display 'thank you' */}
 
             {!formSubmitted && (
                 // form not submitted - display form
-                <form
-                    ref={form}
-                    onSubmit={handleEmail}
-                    id='contact-form'
-                    className={styles.contact_form}
-                >                    
+                    
+                    
+                    <form
+                        ref={form}
+                        onSubmit={handleEmail}
+                        id='contact-form'
+                        className={styles.contact_form}
+                    >                    
 
-                    <div className={`form-group ${styles.name_input}`}>
-                        <label>Name</label>
-                        <input
-                            type='text'
-                            name='user_name'
-                            className='form-control'
-                            required
-                        />
-                    </div>
+                        <div className={`form-group ${styles.name_input}`}>
+                            <label>Name</label>
+                            <input
+                                type='text'
+                                name='user_name'
+                                className='form-control'
+                                required
+                            />
+                        </div>
 
-                    <div className={`form-group ${styles.email_input}`}>
-                        <label>Email</label>
-                        <input
-                            type='email'
-                            name='user_email'
-                            className='form-control'
-                            aria-describedby='emailHelp'
-                            placeholder='Enter email'
-                            required
-                        />
-                    </div>
+                        <div className={`form-group ${styles.email_input}`}>
+                            <label>Email</label>
+                            <input
+                                type='email'
+                                name='user_email'
+                                className='form-control'
+                                aria-describedby='emailHelp'
+                                placeholder='Enter email'
+                                required
+                            />
+                        </div>
 
-                    <div className={`form-group ${styles.message_input}`}>
-                        <label>Message</label>
-                        <textarea
-                            name='message'
-                            className='form-control'
-                            required
-                        />
-                    </div>
+                        <div className={`form-group ${styles.message_input}`}>
+                            <label>Message</label>
+                            <textarea
+                                name='message'
+                                className='form-control'
+                                required
+                            />
+                        </div>                
 
                     {/* if button is clicked, show loading spinner */}
 

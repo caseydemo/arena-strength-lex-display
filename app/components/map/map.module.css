@@ -1,0 +1,15 @@
+.map_container {
+    text-align: center;
+    margin: 50px 0px 75px 0px;
+    &p {
+        font-size: 100px !important;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 1rem;
+    }
+    .map_sub_heading {        
+        margin: 1rem 0;
+        font-size: 40px;
+        font-weight: 700;        
+    }    
+}

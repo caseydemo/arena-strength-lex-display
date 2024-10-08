@@ -1,7 +1,6 @@
 import { getClient } from "@faustwp/experimental-app-router";
 import { gql } from "@apollo/client";
 import setMetaData from "./lib/setMetaData";
-import Map from './components/Map';
 export let metadata = {
     openGraph: {},
     robots: {}
@@ -83,13 +82,13 @@ export default async function Home() {
             {page && page.title ? (
                 <>
                     <div dangerouslySetInnerHTML={{ __html: schemaString }} />
-                    <h1 style={{display: "none"}} >{page.title}</h1>
+                    <h1 className='main_heading' >{page.title}</h1>
+                    {/* <h5>Lexington KY's premiere weight training gym</h5> */}
                     <section>
                         <div
                             dangerouslySetInnerHTML={{ __html: page.content }}
                         />
-                    </section>                    
-                    <Map />
+                    </section>
                 </>
             ) : (
                 <p>No page found</p>

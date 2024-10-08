@@ -6,8 +6,8 @@ import { FaustProvider } from "@faustwp/experimental-app-router/ssr";
 import { Metadata } from "next";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import ContactForm from './contact-us/Form';
-import Map from './components/Map';
+import ContactForm from './components/contact-form/Form';
+import Map from './components/map/Map';
 import BootstrapClient from "./components/BootstrapClient";
 import "./wordpress-styles.ts";
 import "./styles/global.css";
@@ -53,7 +53,9 @@ export default async function RootLayout({ children }) {
                 <FaustProvider>
                     {/* <header></header> */}
                     <Header />
-                    {children}                    
+                    {children}
+                    <ContactForm />                    
+                    <Map />
                     <Footer />
                     <BootstrapClient />               
                 </FaustProvider>

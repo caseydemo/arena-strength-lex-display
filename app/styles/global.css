@@ -6,9 +6,9 @@
 /* hero - h1 */
 .wp-block-cover__inner-container p:first-child {
     font-size: 100px !important;
-    font-weight: 700;    
+    font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-bottom: 1rem;    
+    margin-bottom: 1rem;
 }
 
 /* hero - sub heading */
@@ -26,9 +26,61 @@
     width: 120px;
     height: 120px;
     animation: spin 2s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* services headings */
+.wp-block-media-text__content {
+    > h2 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+    > p {
+        font-size: 25px;
+        font-weight: 400;        
+    }
+}
+
+
+#contact_us_heading {
+    text-align: center;
+    margin-top: 45px;
+}
+.main_heading, .main_sub_heading, .contact_us_button_container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.main_heading {
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 100px;
+    /* make this gigantic */
+}
+.contact_us_button_container {
+    margin: 50px 0px 75px 0px;
+}
+.contact_us_button {    
+    /* background-color: #32373c; */
+    background-color: #10b8ff;
+    border-radius: 9999px;
+    box-shadow: none;
+    padding: calc(.667em + 2px) calc(1.333em + 2px);
+    font-size: 1.125em;
+    & a {
+        /* convert to all caps */
+        text-transform: uppercase;
+        color: black;
+        text-decoration: none;        
+        font-weight: bold;
+    }
+}
+
+
