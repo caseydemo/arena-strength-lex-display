@@ -1,7 +1,6 @@
 import { getClient } from "@faustwp/experimental-app-router";
 import { gql } from "@apollo/client";
 import setMetaData from "./lib/setMetaData";
-import ContactForm from './contact-us/FormClient';
 import Map from './components/Map';
 export let metadata = {
     openGraph: {},
@@ -89,8 +88,7 @@ export default async function Home() {
                         <div
                             dangerouslySetInnerHTML={{ __html: page.content }}
                         />
-                    </section>
-                    <ContactForm />
+                    </section>                    
                     <Map />
                 </>
             ) : (

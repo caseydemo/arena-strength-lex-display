@@ -1,7 +1,8 @@
 import { NextRequest } from "next/server";
 import nodemailer from "nodemailer";
+import { buildEmailBody } from "./lib";
 
-type EmailFormData = {
+export type EmailFormData = {
     email: string;
     name: string;
     message: string;
@@ -27,10 +28,7 @@ export async function POST(request: NextRequest) {
             SMTP_HOST, 
             SMTP_PORT, 
             SMTP_USER, 
-            SMTP_PW, 
-            ARENA_INFO_EMAIL,
-            ARENA_INFO_NAME,
-            EMAIL_SUBJECT 
+            SMTP_PW,
         } = process.env;
 
         // create a nodemailer transporter
@@ -48,20 +46,25 @@ export async function POST(request: NextRequest) {
             throw new Error("Could not create transporter");
         }
         
+        // build the email body as a table containing the form data
+        const emailBody = buildEmailBody(requestBody);
+
+        // # email defaults
+        const arenaEmail  ='info@arena-strength-lex.com';
+        const subject = 'Form Submission | arena-strength-lex.com';
+
         // send mail with defined transport object
         const info = await transporter.sendMail({
-            from: `"${ARENA_INFO_NAME}" <${ARENA_INFO_EMAIL}>`, // sender address
-            to: ARENA_INFO_EMAIL, // list of receivers
-            subject: EMAIL_SUBJECT, // Subject line
-            text: `From: ${requestBody.name}\n\n${requestBody.message}`, // plain text body
-            html: `<p>From: ${requestBody.name}</p><p>${requestBody.message}</p>`, // html body
+            from: `Arena Strength & Performance <${arenaEmail}>`, // sender address
+            to: arenaEmail,
+            subject: subject,
+            text: `From: ${requestBody.name}\n\n${requestBody.email}\n\n${requestBody.message}`, // plain text body
+            html: emailBody, // html body
         });        
 
         if(!info) {
             throw new Error("Could not send email");
-        }
-        
-        console.log('info', info);
+        }        
 
         return Response.json(null, {status: 200});
 

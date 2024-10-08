@@ -6,7 +6,7 @@ import { FaustProvider } from "@faustwp/experimental-app-router/ssr";
 import { Metadata } from "next";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import ContactForm from './contact-us/FormClient';
+import ContactForm from './contact-us/Form';
 import Map from './components/Map';
 import BootstrapClient from "./components/BootstrapClient";
 import "./wordpress-styles.ts";
