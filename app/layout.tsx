@@ -12,6 +12,10 @@ import BootstrapClient from "./components/BootstrapClient";
 import "./wordpress-styles.ts";
 import "./styles/global.css";
 
+// faust block support - currently this doesn't seem to work with app router
+import { WordPressBlocksProvider } from '@faustwp/blocks';
+import blocks from '../wp-blocks';
+
 
 
 export const metadata: Metadata = {
@@ -51,13 +55,25 @@ export default async function RootLayout({ children }) {
         <html lang='en'>
             <body>
                 <FaustProvider>
-                    {/* <header></header> */}
-                    <Header />
-                    {children}
-                    <ContactForm />                    
-                    <Map />
-                    <Footer />
-                    <BootstrapClient />               
+                    {/* THIS DONT WORK
+                        <WordPressBlocksProvider
+                        config={{
+                        blocks,
+                        theme: null
+                        }}> */}
+                        
+                        <Header />
+                        {children}
+                        <ContactForm />                    
+                        <Map />
+                        <Footer />
+                        <BootstrapClient />
+
+
+                    {/* 
+                    THIS DONT WORK
+                    </WordPressBlocksProvider> 
+                    */}
                 </FaustProvider>
             </body>
         </html>

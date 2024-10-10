@@ -82,8 +82,7 @@ export default async function Home() {
             {page && page.title ? (
                 <>
                     <div dangerouslySetInnerHTML={{ __html: schemaString }} />
-                    <h1 className='main_heading' >{page.title}</h1>
-                    {/* <h5>Lexington KY's premiere weight training gym</h5> */}
+                    <h1 className='main_heading' >{page.title}</h1>                    
                     <section>
                         <div
                             dangerouslySetInnerHTML={{ __html: page.content }}

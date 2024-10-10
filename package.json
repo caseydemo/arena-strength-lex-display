@@ -7,7 +7,8 @@
     "build": "faust build",
     "generate": "faust generatePossibleTypes",
     "stylesheet": "faust generateGlobalStylesheet",
-    "start": "faust start"
+    "start": "faust start",
+    "blockset": "faust blockset"
   },
   "dependencies": {
     "@apollo/client": "^3.8.0",
@@ -17,6 +18,7 @@
     "@faustwp/core": "^2.1.2",
     "@faustwp/experimental-app-router": "^0.2.2",
     "@wordpress/block-library": "^9.8.2",
+    "@wordpress/style-engine": "^2.9.0",
     "bootstrap": "^5.3.2",
     "graphql": "^16.7.1",
     "next": "^14.0.1",

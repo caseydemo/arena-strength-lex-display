@@ -42,7 +42,7 @@ export default async function Page(props) {
         variables: {
             id,
             idType: isPreview ? "DATABASE_ID" : "URI",
-            asPreview: false,
+            asPreview: true,
         },
         fetchPolicy: "no-cache", // Don't cache graphql requests
         context: {
